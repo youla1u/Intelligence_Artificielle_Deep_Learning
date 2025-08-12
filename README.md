@@ -1,1 +1,1 @@
-Images classification and texts classification
+Images classification and texts classification.
