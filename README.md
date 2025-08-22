@@ -1,8 +1,5 @@
-# 🚀 Projet Deep Learning – Extraction de Définitions
-
-**Participants :** YOULA Mohamed & Glody Yabada  
-**Projet 5 - Master**  
-
+# 🚀 Projet_2: Extraction de Définitions
+ 
 ## 🎯 Objectif
 Développer un modèle capable de classifier automatiquement des définitions extraites de textes en **bonnes** ou **mauvaises définitions**, à l’aide de **réseaux de neurones** (MLP, CNN, LSTM).
 
