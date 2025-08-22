@@ -1,3 +1,93 @@
+# 🌾 Projet_1: Classification de routes et champs par CNN
+
+## Description
+Ce projet explore la classification d'images en deux catégories : **routes** et **champs**, en comparant trois types de représentations :
+- Images en **RGB** (couleur originale)
+- Images en **niveaux de gris (L)**
+- Images en **niveaux de gris avec égalisation locale d'histogramme (L-LHE)**
+
+L'objectif est de déterminer si la couleur est nécessaire ou si des pré-traitements des images améliorent la performance d'un réseau de neurones convolutionnel (CNN).
+
+---
+
+## Jeu de données
+- Nombre total d’images : **90**
+- Catégories : `route`, `champ`
+- Taille des images : 150 × 150 pixels
+
+| Type de données | Description |
+|-----------------|------------|
+| RGB             | Image couleur originale |
+| L               | Conversion en niveaux de gris |
+| L-LHE           | Niveaux de gris + égalisation locale d’histogramme |
+
+---
+
+## Architecture du modèle CNN
+- 2 blocs convolution + max pooling
+- 1 couche `Flatten`
+- 1 couche dense (128 neurones, ReLU)
+- 1 couche de sortie (sigmoïde pour classification binaire)
+- Dropout = 0.5 pour régularisation
+- Optimiseur : `Adam`
+- Fonction de perte : `binary_crossentropy`
+
+---
+
+## Résultats
+
+| Jeu de données | Précision entraînement | Précision validation |
+|----------------|------------------------|---------------------|
+| RGB            | ~87,5 %               | ~66,7 %             |
+| L (gris)       | ~90 %                 | ~83,3 %             |
+| L-LHE          | ~75 % (instable)      | ~50–55 %            |
+
+### Interprétation
+- ✅ **Niveaux de gris (L)** : meilleur compromis entre apprentissage et généralisation.
+- ⚠️ **RGB** : surapprentissage possible.
+- ❌ **L-LHE** : égalisation locale trop perturbante pour le CNN.
+
+---
+
+## Améliorations possibles
+- Augmentation de données (rotations, flips, variations de luminosité)
+- Régularisation des couches convolutionnelles (`kernel_regularizer=L2`)
+- Ajustement de la taille du batch (8 ou 16)
+- Early stopping pour éviter le surapprentissage
+- Validation croisée k-fold pour plus de robustesse
+- Apprentissage par transfert avec modèles pré-entraînés (VGG16, MobileNetV2, ResNet)
+
+---
+
+## Conclusion
+- La **couleur n’est pas indispensable** pour ce jeu de données.
+- L’**égalisation locale** n’améliore pas la performance et peut la dégrader.
+- Avec un petit dataset, l’**augmentation de données** et/ou **l’apprentissage par transfert** est fortement recommandé.
+
+---
+
+## Exemple d’utilisation (Python/Keras)
+```python
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+
+model = Sequential([
+    Conv2D(32, (3,3), activation='relu', input_shape=(150,150,1)),
+    MaxPooling2D(2,2),
+    Conv2D(64, (3,3), activation='relu'),
+    MaxPooling2D(2,2),
+    Flatten(),
+    Dense(128, activation='relu'),
+    Dropout(0.5),
+    Dense(1, activation='sigmoid')
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+
+**-----------------------------------------------------------------------------------------------------------------------------------------------------**
+
+
 # 🚀 Projet_2: Extraction de Définitions
  
 ## 🎯 Objectif
