@@ -1,4 +1,4 @@
-#                  Projet d’Intelligence Artificielle : Deep Learning 
+#                  Projets d’Intelligence Artificielle : Deep Learning 
 
 Ce dépôt contient deux projets explorant l’utilisation des réseaux de neurones pour des tâches différentes :  
 
