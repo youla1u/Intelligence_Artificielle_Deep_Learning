@@ -1,4 +1,4 @@
-# 🌾 Projet d’Intelligence Artificielle : Classification et Extraction
+# 🌾 Projet d’Intelligence Artificielle : Deep Learning 
 
 Ce dépôt contient deux projets explorant l’utilisation des réseaux de neurones pour des tâches différentes :  
 
@@ -145,22 +145,5 @@ Classifier automatiquement des définitions en **bonnes** ou **mauvaises**, à l
 - Leur capacité à capturer les **dépendances séquentielles du langage** explique la performance  
 
 ---
-
-## Exemple d’utilisation (Python/Keras)
-
-```python
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.preprocessing.text import Tokenizer
-
-# Modèle LSTM simplifié
-model = Sequential([
-    Embedding(input_dim=5000, output_dim=50, input_length=50),
-    LSTM(128, return_sequences=False),
-    Dropout(0.5),
-    Dense(1, activation='sigmoid')
-])
-
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
