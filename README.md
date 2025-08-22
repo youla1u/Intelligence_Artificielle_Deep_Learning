@@ -7,7 +7,7 @@ Ce dépôt contient deux projets explorant l’utilisation des réseaux de neuro
 
 ---
 
-# 🌾 Projet_1: Classification de routes et champs par CNN
+# 🌾& 🛣️ Projet_1: Classification de routes et champs par CNN
 
 ## Description
 Ce projet explore la **classification d’images** en deux catégories : **routes** et **champs**, en comparant trois types de représentations :  
