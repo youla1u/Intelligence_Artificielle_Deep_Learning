@@ -3,7 +3,7 @@
 Ce dépôt contient deux projets explorant l’utilisation des réseaux de neurones pour des tâches différentes :  
  
 1. **Projet_1 : Classification d’images de routes et champs avec CNN**  
-2. **Projet_2 : Extraction et classification de définitions textuelles avec MLP, CNN et LSTM**   
+2. **Projet_2 : Extraction et classification de définitions textuelles avec MLP, CNN et LSTM**    
  
 ---
 
