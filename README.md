@@ -7,7 +7,7 @@ Ce dépôt contient deux projets explorant l’utilisation des réseaux de neuro
  
 ---
 
-# 🌾& 🛣️ Projet_1: Classification de routes et champs
+# Projet_1: Classification de routes et champs
 
 ## Description
 Ce projet explore la **classification d’images** en deux catégories : **routes** et **champs**, en comparant trois types de représentations :  
@@ -76,7 +76,7 @@ Ce projet explore la **classification d’images** en deux catégories : **route
 
 ---
 
-# 📄 Projet_2: Extraction et classification de définitions
+# Projet_2: Extraction et classification de définitions
 
 ## Objectif
 Classifier automatiquement des définitions en **bonnes** ou **mauvaises**, à l’aide de **réseaux de neurones** (MLP, CNN, LSTM).
